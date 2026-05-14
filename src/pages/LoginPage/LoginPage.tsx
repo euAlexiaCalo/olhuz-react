@@ -1,0 +1,67 @@
+import { AiOutlineEye } from "react-icons/ai";
+import { FcGoogle } from "react-icons/fc";
+import LabelInput from "../../components/Input/Input";
+import Button from "../../components/Button/Button";
+import "./LoginPage.css";
+function LoginPage() {
+  return (
+    <main className="login-page">
+      <div className="container">
+        <form action="/login" method="POST" className="login-form">
+          <h1>Acesse sua conta Olhuz</h1>
+          <div>
+            <LabelInput
+              label="Email"
+              type="email"
+              placeholder="Digite seu email"
+              id="email"
+              required
+            />
+          </div>
+          <div>
+            <LabelInput
+              label="Senha"
+              type="password"
+              placeholder="Digite sua senha"
+              id="password"
+              required
+            >
+              <AiOutlineEye className="icon-eye" />
+            </LabelInput>
+            <a href="/forgot-password">Esqueceu sua senha?</a>
+          </div>
+          <div className="login-container-buttons">
+            <Button
+              text="Entrar"
+              type="submit"
+              onClick={() => {}}
+              color="#ffffff"
+              bgColor="#1A3672"
+            />
+            <div className="divider">
+              <hr />
+              <p>ou</p>
+              <hr />
+            </div>
+            <Button
+              text="Entrar com Google"
+              type="button"
+              onClick={() => {}}
+              color="#000000"
+              bgColor="#ffffff"
+              borderColor="#EBEBEB"
+            >
+              <FcGoogle className="icon-google" />
+            </Button>
+          </div>
+          <div>
+            <p>Não tem uma conta?</p>
+            <a href="/register">Crie sua conta Olhuz</a>
+          </div>
+        </form>
+      </div>
+    </main>
+  );
+}
+
+export default LoginPage;

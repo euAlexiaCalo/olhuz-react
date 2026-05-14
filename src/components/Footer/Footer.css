@@ -1,0 +1,110 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    background-color: #1A3672;
+    color: white;
+    padding: 40px 0 20px 0;
+}
+
+.footer-content{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 80px 20px 80px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 8px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 8px;
+    margin-left: 4px;
+}
+
+.footer-links a {
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+}
+
+.footer-section:nth-child(2)>.footer-links {
+    flex-direction: row;
+}
+
+.footer-section:nth-child(3)>.footer-links a {
+    color: black;
+}
+
+.footer-icon {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+    margin-left: 4px;
+}
+
+.baixar-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.baixar-logo>img {
+    height: 30px;
+}
+
+.footer-legal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 24px;
+    padding: 8px 0 16px 0;
+    border-top: 1px solid white;
+}
+
+.footer-legal a {
+    color: white;
+    font-size: 16px;
+}
+
+.footer-legal hr {
+    width: 1px;
+    height: 20px;
+}
+
+.footer-copy {
+    font-size: 14px;
+    text-align: center;
+}

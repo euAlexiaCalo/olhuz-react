@@ -1,0 +1,164 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding-bottom: 100px;
+}
+
+.about-history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 80px 20px;
+    background-color: aliceblue;
+}
+
+.about-history > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 60px;
+    max-width: 1200px;
+}
+.about-history > div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+    max-width: 800px;
+}
+
+.about-history  h1 {
+    font-size: 48px;
+    font-weight: 600;
+    text-align: center;
+    color: #002b5b;
+    line-height: 3rem;
+}
+
+.about-history p {
+    font-size: 20px;
+    text-align: left;
+    color: rgb(48, 48, 48);
+    line-height: 1.5rem;
+}
+
+.about-history img {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.about-founders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1400px;
+    padding: 20px 20px;
+}
+
+.about-founders h2 {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    color: #002b5b;
+}
+
+.about-founders > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 32px;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.about-mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    width: 100%;
+    padding: 80px 20px;
+    color: white;
+    background-color: #002b5b;
+}
+
+.about-mission > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    max-width: 1000px;
+}
+
+.about-mission > div > h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+.about-mission > div > p {
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.about-mission > p {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 2rem;
+    color: #fad02c;
+}
+
+.about-innovation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 60px;
+    max-width: 1200px;
+    padding: 40px 20px;
+}
+
+.about-innovation img {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.about-innovation > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+}
+
+.about-innovation > div > h2 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 2.5rem;
+    color: #002b5b;
+}
+
+.about-innovation > div > p {
+    font-size: 20px;
+    line-height: 1.5rem;
+    color: rgb(48, 48, 48);
+}

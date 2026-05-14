@@ -1,0 +1,41 @@
+.home-resources-item  {
+    border: 2px solid #e5e4e7;
+    padding: 24px 0;
+    border-radius: 8px;
+}
+
+.home-resources-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #002855;
+    border-radius: 0 32px 32px 0;
+    padding: 8px 0;
+    width: 90px;
+}
+
+.home-resources-icons > svg {
+    color: white;
+    width: 34px;
+    height: 34px;
+}
+
+.home-resources-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px 24px 0;
+}
+
+.home-resources-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #002855;
+}
+
+.home-resources-content p {
+    font-size: 16px;
+    color: #686868;
+}
