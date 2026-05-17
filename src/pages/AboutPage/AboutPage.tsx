@@ -7,10 +7,10 @@ import MemberCard from "./components/Member/Member";
 import "./AboutPage.css";
 function AboutPage() {
     return (
-        <div>
+        <>
             <Navbar />
             <main className="about-container">
-                <div className="about-history">
+                <section className="about-hero">
                     <div>
                         <div>
                             <h1>Nossa História</h1>
@@ -18,8 +18,8 @@ function AboutPage() {
                         </div>
                         <img src={ImgOlhoPc} alt="Imagem do Olho do PC" />
                     </div>
-                </div>
-                <div className="container about-founders">
+                </section>
+                <section className="about-founders">
                     <h2>Nossos Fundadores</h2>
                     <div>
                         {team.map((member) => (
@@ -34,24 +34,26 @@ function AboutPage() {
                             />
                         ))}
                     </div>
-                </div>
-                <div className="about-mission">
+                </section>
+                <section className="about-mission">
                     <div>
                         <h2>Nossa Missão</h2>
                         <p>Estamos aqui para criar um mundo digital acessível para todos. Acreditamos que a tecnologia deve ser uma ponte, não uma barreira, e estamos dedicados a desenvolver soluções que empoderem pessoas com deficiência visual a navegar, explorar e interagir com o mundo digital de forma independente.</p>
                     </div>
                     <p><em>"Transformar tecnologia em liberdade"</em></p>
-                </div>
-                <div className="about-innovation">
-                    <img src={ImgHardware} alt="Imagem de Equipamentos de Hardware" />
+                </section>
+                <section className="about-innovation">
                     <div>
-                        <h2>Inovação com Propósito</h2>
-                        <p>Nossa equipe trabalha incansavelmente para manter o Olhuz no topo da inovação. Cada linha de código é escrita pensando na experiência real do usuário, garantindo que a tecnologia de IA seja, acima de tudo, humana e empática.</p>
+                        <img src={ImgHardware} alt="Imagem de Equipamentos de Hardware" />
+                        <div>
+                            <h2>Inovação com Propósito</h2>
+                            <p>Nossa equipe trabalha incansavelmente para manter o Olhuz no topo da inovação. Cada linha de código é escrita pensando na experiência real do usuário, garantindo que a tecnologia de IA seja, acima de tudo, humana e empática.</p>
+                        </div>
                     </div>
-                </div>
+                </section>
             </main>
             <Footer />
-        </div>
+        </>
     );
 }
 

@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 40px;
     padding-bottom: 100px;
 }
 
@@ -13,9 +12,9 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 80px 20px;
-    max-width: 1200px;
-    gap: 60px;
+    padding: 100px 20px;
+    max-width: 1400px;
+    gap: 64px;
 }
 
 .home-hero > div {
@@ -24,6 +23,7 @@
     align-items: flex-start;
     justify-content: center;
     gap: 24px;
+    max-width: 680px;
 }
 
 .home-hero > div > h1 {
@@ -41,7 +41,6 @@
     font-size: 20px;
     color: rgb(46, 46, 46);
     line-height: 1.5rem;
-    max-width: 580px;
 }
 
 .home-hero > div > div {
@@ -77,7 +76,7 @@
     justify-content: center;
     gap: 64px;
     width: 100%;
-    padding: 80px 20px;
+    padding: 100px 20px;
     background-color: #f0f0f0;
 }
 
@@ -95,7 +94,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    gap: 60px;
+    gap: 32px;
     max-width: 1400px;
 }
 
@@ -146,21 +145,30 @@
     background-color: #fad02c;
 }
 
-.home-container > h2 {
+.home-resources {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    width: 100%;
+    padding: 100px 20px;
+}
+
+.home-resources > h2 {
     font-size: 40px;
     font-weight: 600;
     text-align: center;
-    color: #041d3a;
+    color: #002855;
     line-height: 2.6rem;
 }
 
-.home-resources-list {
+.home-resources > ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     width: 100%;
     max-width: 1400px;
-    padding: 20px;
-    gap: 30px;
+    gap: 32px;
 }
 
 .home-feedbacks {
@@ -168,9 +176,24 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 64px;
     width: 100%;
-    padding: 20px 20px;
-    color: white;
+    padding: 100px 20px;
     background-color: #052d5c;
+}
+
+.home-feedbacks > h2 {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 2.6rem;
+    color: white;
+}
+
+.home-feedbacks > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    width: 100%;
+    max-width: 1400px;
+    gap: 32px;
 }

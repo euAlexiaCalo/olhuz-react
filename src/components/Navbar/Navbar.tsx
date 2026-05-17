@@ -18,7 +18,7 @@ function Navbar() {
             <a href="/">Início</a>
           </li>
           <li>
-            <a href="/recursos">Recursos</a>
+            <a href="/funcionalidades">Funcionalidades</a>
           </li>
           <li>
             <a href="/sobre">Sobre</a>

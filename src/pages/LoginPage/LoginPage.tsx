@@ -56,7 +56,7 @@ function LoginPage() {
           </div>
           <div>
             <p>Não tem uma conta?</p>
-            <a href="/register">Crie sua conta Olhuz</a>
+            <a href="/cadastro">Crie sua conta Olhuz</a>
           </div>
         </form>
       </div>

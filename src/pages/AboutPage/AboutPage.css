@@ -3,54 +3,53 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 80px;
-    padding-bottom: 100px;
 }
 
-.about-history {
+.about-hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 80px 20px;
+    padding: 100px 0px;
     background-color: aliceblue;
 }
 
-.about-history > div {
+.about-hero > div {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    gap: 60px;
-    max-width: 1200px;
+    gap: 64px;
+    max-width: 1400px;
+    padding: 0 20px;
 }
-.about-history > div > div {
+.about-hero > div > div {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     gap: 24px;
-    max-width: 800px;
+    max-width: 680px;
 }
 
-.about-history  h1 {
+.about-hero  h1 {
     font-size: 48px;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
     color: #002b5b;
     line-height: 3rem;
 }
 
-.about-history p {
+.about-hero p {
     font-size: 20px;
     text-align: left;
     color: rgb(48, 48, 48);
     line-height: 1.5rem;
 }
 
-.about-history img {
+.about-hero img {
     width: 400px;
     height: auto;
     border-radius: 8px;
@@ -61,10 +60,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 64px;
     width: 100%;
     max-width: 1400px;
-    padding: 20px 20px;
+    padding: 132px 20px;
 }
 
 .about-founders h2 {
@@ -79,7 +78,6 @@
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 32px;
     width: 100%;
-    padding: 20px 0;
 }
 
 .about-mission {
@@ -89,7 +87,7 @@
     justify-content: center;
     gap: 48px;
     width: 100%;
-    padding: 80px 20px;
+    padding: 100px 20px;
     color: white;
     background-color: #002b5b;
 }
@@ -126,13 +124,11 @@
 
 .about-innovation {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
-    gap: 60px;
-    max-width: 1200px;
-    padding: 40px 20px;
+    padding: 140px 20px;
 }
 
 .about-innovation img {
@@ -143,21 +139,31 @@
 
 .about-innovation > div {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 64px;
+    max-width: 1400px;
+}
+
+.about-innovation > div > div {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     gap: 20px;
-    max-width: 800px;
+    width: 100%;
 }
 
-.about-innovation > div > h2 {
+.about-innovation > div > div > h2 {
     font-size: 36px;
     font-weight: 600;
     line-height: 2.5rem;
     color: #002b5b;
 }
 
-.about-innovation > div > p {
+.about-innovation > div > div > p {
     font-size: 20px;
     line-height: 1.5rem;
     color: rgb(48, 48, 48);

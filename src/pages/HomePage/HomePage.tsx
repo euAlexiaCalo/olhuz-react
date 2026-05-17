@@ -4,16 +4,18 @@ import Button from "../../components/Button/Button";
 import ImgCell from "../../assets/celularOlhuz.jpg";
 import { resources } from "../../data/resources";
 import ItemResource from "./components/ItemResource/ItemResource";
+import { feedbacks } from "../../data/feedbacks";
+import ItemFeedback from "./components/ItemFeedbacks/ItemFeedback";
 import { RiVolumeUpLine } from "react-icons/ri";
 import { IoMdEye } from "react-icons/io";
 import "./HomePage.css";
 
 function HomePage() {
     return (
-        <div>
+        <>
             <Navbar />
             <main className="home-container">
-                <div className="home-hero">
+                <section className="home-hero">
                     <div>
                         <h1>Sinta o mundo digital através das palavras.</h1>
                         <p>Muito além de um leitor de telas. O Olhuz reconhece, analisa e descreve cada detalhe visual, devolvendo a você a independência na navegação.</p>
@@ -29,8 +31,8 @@ function HomePage() {
                         </div>
                     </div>
                     <img src={ImgCell} alt="Imagem de um celular com o Olhuz" className="home-image" />
-                </div>
-                <div className="home-why">
+                </section>
+                <section className="home-why">
                     <h2>Por que os leitores de tela tradicionais não são suficientes?</h2>
                     <div>
                         <div>
@@ -44,26 +46,38 @@ function HomePage() {
                             <p>"Seus três melhores amigos estão sorrindo em volta de um bolo de aniversário iluminado por velas, em uma sala com luz quente e acolhedora." Compreenda a emoção.</p>
                         </div>
                     </div>
-                </div>
+                </section>
                 <hr />
-                <h2>Tecnologia que Transforma Visão em Contexto.</h2>
-                <ul className="home-resources-list">
-                    {resources.map((resource) => (
-                        <ItemResource
-                        key={resource.id}
-                        title={resource.title}
-                        description={resource.description}
-                        Icon={resource.icon}
-                        />
-                        ))}
-                </ul>
-                <div className="home-feedbacks">
+                <section className="home-resources">
+                    <h2>Tecnologia que Transforma Visão em Contexto.</h2>
+                    <ul>
+                        {resources.map((resource) => (
+                            <ItemResource
+                            key={resource.id}
+                            title={resource.title}
+                            description={resource.description}
+                            Icon={resource.icon}
+                            />
+                            ))}
+                    </ul>
+                </section>
+                <section className="home-feedbacks">
                     <h2>Vozes de Quem Conquistou Autonomia</h2>
-                    <div></div>
-                </div>
+                    <div>
+                        {feedbacks.map((feedback) => (
+                            <ItemFeedback
+                            key={feedback.id}
+                            name={feedback.name}
+                            message={feedback.message}
+                            photo={feedback.photo}
+                            alt={feedback.alt}
+                            />
+                        ))}
+                    </div>
+                </section>
             </main>
             <Footer />
-        </div>
+        </>
     );
 }
 

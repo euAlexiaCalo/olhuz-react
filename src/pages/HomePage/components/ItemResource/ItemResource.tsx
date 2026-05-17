@@ -5,7 +5,7 @@ interface ItemResourceProps {
     Icon: React.ComponentType;
 }
 
-function ItemResource({ title, description, Icon }: ItemResourceProps) {
+export default function ItemResource({ title, description, Icon }: ItemResourceProps) {
     return (
         <li className="home-resources-item">
             <div className="home-resources-icons">
@@ -18,5 +18,3 @@ function ItemResource({ title, description, Icon }: ItemResourceProps) {
         </li>
     );
 }
-
-export default ItemResource;

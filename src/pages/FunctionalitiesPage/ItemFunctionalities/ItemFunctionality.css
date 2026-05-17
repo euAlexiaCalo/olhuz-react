@@ -1,0 +1,40 @@
+.functionality-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+    padding: 32px;
+    border-radius: 8px;
+    border: 2px solid #e5e4e7;
+}
+
+.functionality-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #002855;
+    border-radius: 50%;
+    padding: 8px;
+    margin: 0px 0px 16px 0px;
+}
+
+.functionality-icon > svg {
+    color: white;
+    width: 32px;
+    height: 32px;
+}
+
+.functionality-item > h2 {
+    font-size: 22px;
+    font-weight: 600;
+    text-align: left;
+    color: #002855;
+    line-height: 1.5rem;
+}
+
+.functionality-item > p {
+    font-size: 16px;
+    text-align: left;
+    line-height: 1.5rem;
+}

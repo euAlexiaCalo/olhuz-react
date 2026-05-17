@@ -113,7 +113,7 @@ function RegisterPage() {
               </div>
             </div>
             <Button
-                text="Entrar"
+                text="Cadastrar"
                 type="button"
                 onClick={() => {}}
                 color="#ffffff"

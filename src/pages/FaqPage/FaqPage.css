@@ -1,0 +1,133 @@
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.faq-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #002b5b;
+}
+
+.faq-hero > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    max-width: 1000px;
+    gap: 24px;
+    width: 100%;
+}
+
+.faq-hero > div > h1 {
+    font-size: 48px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
+
+.faq-hero > div > p {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+}
+
+.faq-hero #search {
+    padding-left: 42px;
+    width: 680px;
+    height: 56px;
+    border-radius: 32px;
+}
+
+.faq-hero svg {
+    left: 12px;
+}
+
+.faq-categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+}
+
+.faq-categories > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    width: 100%;
+    max-width: 1400px;
+    gap: 32px;
+}
+
+.faq-questions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    width: 100%;
+}
+
+.faq-questions > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 32px;
+}
+
+.faq-questions > div > h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #002855;
+    line-height: 2.6rem;
+    padding-left: 20px;
+    border-left: 6px solid #fad02c;
+}
+
+.faq-support {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    width: 100%;
+}
+
+.faq-support > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    gap: 32px;
+}
+
+.faq-support > div > h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #002855;
+    line-height: 2.6rem;
+}
+
+.faq-support > div > svg {
+    width: 80px;
+    height: 80px;
+    color: #00a8e8;
+}
+
+.faq-support > div > button {
+    width: 320px;
+    height: 56px;
+}

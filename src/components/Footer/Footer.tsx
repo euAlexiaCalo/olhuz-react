@@ -10,8 +10,8 @@ function Footer() {
           <div className="footer-section">
             <h3>Ajuda e atendimento</h3>
             <div className="footer-links">
-              <a href="#duvidas-frequentes">Dúvidas frequentes</a>
-              <a href="#contato">Fale com a gente</a>
+              <a href="/duvidas-frequentes">Dúvidas frequentes</a>
+              <a href="/contato">Fale com a gente</a>
             </div>
           </div>
           <div className="footer-section">

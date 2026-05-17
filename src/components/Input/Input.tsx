@@ -1,7 +1,7 @@
 import './Input.css';
 
 interface InputProps {
-  label: string;
+  label?: string;
   type: string;
   placeholder: string;
   id: string;
