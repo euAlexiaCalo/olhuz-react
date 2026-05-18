@@ -79,7 +79,7 @@
     white-space: nowrap;
 }
 
-.login-form>div:last-child  a {
+.login-form>div:last-child  Link {
     font-size: 1.1rem;
 }
 

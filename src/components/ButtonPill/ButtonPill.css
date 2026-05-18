@@ -1,0 +1,20 @@
+.btn-pill {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    border: none;
+    padding: 16px 24px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 32px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.active {
+    background-color: #002b5b;
+    color: white;
+}

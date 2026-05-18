@@ -3,7 +3,7 @@ import "./Button.css";
 interface ButtonProps {
   text: string;
   type?: "button" | "submit" | "reset";
-  onClick: () => void;
+  onClick?: () => void;
   color?: string;
   bgColor?: string;
   borderColor?: string;
@@ -17,7 +17,7 @@ function Button({ text, type = "button", onClick,color, bgColor, className, chil
       type={type}
       onClick={onClick}
       className={`btn-primary ${className || ""}`}
-      style={{ color: color, backgroundColor: bgColor, border: borderColor ? `1px solid ${borderColor}` : "none" }}
+      style={{ color: color, backgroundColor: bgColor, border: borderColor ? `2px solid ${borderColor}` : "none" }}
     >
       {children}
       {text}

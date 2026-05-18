@@ -1,0 +1,57 @@
+/* Container que envolve o componente */
+.toggle-wrapper {
+  display: inline-block;
+  user-select: none;
+}
+
+/* Esconde o checkbox padrão do HTML, mas o mantém acessível */
+.toggle-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* O corpo/pista do Switch (Estado Desativado) */
+.toggle-label {
+  display: block;
+  width: 74px;
+  height: 37px;
+  background-color: #747780; /* Cinza da sua imagem */
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Bolinha branca interna */
+.toggle-inner-circle {
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  width: 31px;
+  height: 31px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Mudança de cor da pista quando Ativo (Checked) */
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #0095e0;
+}
+
+/* Movimento da bolinha branca para a direita quando Ativo */
+.toggle-checkbox:checked + .toggle-label .toggle-inner-circle {
+  transform: translateX(35px);
+}
+
+/* Estilo visual opcional para quando o componente estiver desabilitado */
+.toggle-checkbox:disabled + .toggle-label {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

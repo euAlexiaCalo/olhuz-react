@@ -7,21 +7,21 @@ function Navbar() {
     <nav className="navbar">
       <div className="container">
         <div className="navbar-logo">
-          <a href="#"><img src={LogoOlhuz} alt="Logo Olhuz" /></a>
+          <Link to="/"><img src={LogoOlhuz} alt="Logo Olhuz" /></Link>
           <div>
-            <a href="#">Olhuz</a>
-            <a href="#">A técnologia que ilumina o invisível</a>
+            <Link to="/" className="navbar-logo-title">Olhuz</Link>
+            <span className="navbar-subtitle">A tecnologia que ilumina o invisível</span>
           </div>
         </div>
         <ul className="navbar-links">
           <li>
-            <a href="/">Início</a>
+            <Link to="/">Início</Link>
           </li>
           <li>
-            <a href="/funcionalidades">Funcionalidades</a>
+            <Link to="/funcionalidades">Funcionalidades</Link>
           </li>
           <li>
-            <a href="/sobre">Sobre</a>
+            <Link to="/sobre">Sobre</Link>
           </li>
         </ul>
             <Link to="/login">
