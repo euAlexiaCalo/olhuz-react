@@ -8,6 +8,7 @@ import { AiOutlineEye } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import LabelInput from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
+import LogoOlhuz from "../../assets/logoOlhuz.png";
 import "./LoginPage.css";
 function LoginPage() {
   // Estados para armazenar os dados do formulário e erros
@@ -54,6 +55,9 @@ function LoginPage() {
 
   return (
     <main className="login-page">
+      <Link to="/">
+        <img src={LogoOlhuz} alt="Logo Olhuz" className="login-logo" />
+      </Link>
       <div className="container">
         <form onSubmit={handleSubmit} className="login-form">
           <h1>Acesse sua conta Olhuz</h1>

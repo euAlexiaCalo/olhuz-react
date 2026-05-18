@@ -1,3 +1,4 @@
+import { useAuth } from "../../hooks/useAuth";
 import { useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Button from "../../components/Button/Button";
@@ -36,6 +37,8 @@ function AccountPage() {
         { label: "Modo Escuro", icon: <LuMoon /> }
     ];
 
+    const { logout } = useAuth();
+
     return (
         <>
             <Navbar />
@@ -60,6 +63,7 @@ function AccountPage() {
                     </div>
                     <Button
                         text="Sair da Conta"
+                        onClick={logout}
                         color="#8d2a2a"
                         bgColor="white"
                         borderColor="#8d2a2a"
