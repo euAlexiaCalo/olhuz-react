@@ -46,15 +46,15 @@ function AccountPage() {
                         <ul className="account-nav-list">
                             <li>
                                 <MdOutlineSettingsVoice />
-                                <a href="/configuracoes-voz">Configurações de Voz</a>
+                                <a href="#configuracoes-voz">Configurações de Voz</a>
                             </li>
                             <li>
                                 <FaRegUser />
-                                <a href="/dados-pessoais">Dados Pessoais</a>
+                                <a href="#dados-pessoais">Dados Pessoais</a>
                             </li>
                             <li>
                                 <LuShield />
-                                <a href="/seguranca-conta">Segurança da Conta</a>
+                                <a href="#seguranca-conta">Segurança da Conta</a>
                             </li>
                         </ul>
                     </div>
