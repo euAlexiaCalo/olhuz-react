@@ -13,16 +13,62 @@ import "./RegisterPage.css";
 function RegisterPage() {
   // Declaração de todos os estados necessários para o formulário
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
   const [cpf, setCpf] = useState('');
   const [birthdate, setBirthdate] = useState('');
+  const [telephone, setTelephone] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   // Estados de controle da aplicação
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
+
+  // Função que salva os números do CPF no estado
+  const handleCpfChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const apenasNumeros = event.target.value.replace(/\D/g, "");
+    setCpf(apenasNumeros.substring(0, 11));
+  };
+
+  // Formatar o CPF na hora de exibir
+  const formatarCpfParaExibicao = (valor: string) => {
+  const v = valor.replace(/\D/g, "");
+  
+  if (v.length > 9) {
+    return v.replace(/(\d{3})(\d{3})(\d{3})(\d{1,2})/, "$1.$2.$3-$4");
+  }
+  if (v.length > 6) {
+    return v.replace(/(\d{3})(\d{3})(\d{1,3})/, "$1.$2.$3");
+  }
+  if (v.length > 3) {
+    return v.replace(/(\d{3})(\d{1,3})/, "$1.$2");
+  }
+  return v;
+};
+
+  // Função que salva os números do telefone no estado
+  const handleTelephoneChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const apenasNumeros = event.target.value.replace(/\D/g, "");
+    setTelephone(apenasNumeros.substring(0, 11));
+  };
+
+  // Formatar o telefone na hora de exibir
+  const formatarTelephoneParaExibicao = (valor: string) => {
+  const v = valor.replace(/\D/g, "");
+
+  if (v.length === 11) {
+    // Formato Celular: (XX) 99999-9999
+    return v.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+  } else if (v.length > 2) {
+    // Formato Fixo (ou enquanto digita): (XX) 3333-4444
+    return v.replace(/(\d{2})(\d{4})(\d{0,4})/, "($1) $2-$3");
+  } else if (v.length > 0) {
+    // Enquanto digita o DDD: (XX
+    return v.replace(/(\d{0,2})/, "($1");
+  }
+  return v;
+};
 
   // Função que gerencia o envio dos dados para a API
   const handleSubmit = async (e: React.FormEvent) => {
@@ -34,10 +80,11 @@ function RegisterPage() {
       // Envia os dados estruturados para o seu serviço de autenticação
       await authService.register({
         Nome: name,
-        Email: email,
-        Senha: password,
         CPF: cpf,
-        DataNascimento: birthdate
+        DataNascimento: birthdate,
+        Telefone: telephone,
+        Email: email,
+        Senha: password
       });
 
       alert('Cadastro realizado com sucesso! Faça seu login.');
@@ -125,6 +172,40 @@ function RegisterPage() {
               </div>
               <div>
                 <LabelInput
+                  label="CPF"
+                  type="text"
+                  placeholder="Digite seu CPF"
+                  id="cpf"
+                  value={formatarCpfParaExibicao(cpf)}
+                  onChange={handleCpfChange}
+                  required
+                />
+              </div>
+              <div>
+                <LabelInput
+                  label="Data de Nascimento"
+                  type="date"
+                  placeholder="dd/mm/aaaa"
+                  id="birthdate"
+                  value={birthdate}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setBirthdate(e.target.value)}
+                  required
+                />
+              </div>
+              <div>
+                <LabelInput
+                  label="Telefone"
+                  type="tel"
+                  format="(##) #####-####"
+                  placeholder="Digite seu telefone"
+                  id="telephone"
+                  value={formatarTelephoneParaExibicao(telephone)}
+                  onChange={handleTelephoneChange}
+                  required
+                />
+              </div>
+              <div>
+                <LabelInput
                   label="Email"
                   type="email"
                   placeholder="email@email.com"
@@ -147,28 +228,6 @@ function RegisterPage() {
                   <AiOutlineEye className="icon-eye" />
                 </LabelInput>
                 <p>A senha deve ter no mínimo 8 caracteres, incluindo um número, uma letra maiúscula e uma letra minúscula.</p>
-              </div>
-              <div>
-                <LabelInput
-                  label="CPF"
-                  type="text"
-                  placeholder="Digite seu CPF"
-                  id="cpf"
-                  value={cpf}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCpf(e.target.value)}
-                  required
-                />
-              </div>
-              <div>
-                <LabelInput
-                  label="Data de Nascimento"
-                  type="date"
-                  placeholder="dd/mm/aaaa"
-                  id="birthdate"
-                  value={birthdate}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setBirthdate(e.target.value)}
-                  required
-                />
               </div>
             </div>
             <Button

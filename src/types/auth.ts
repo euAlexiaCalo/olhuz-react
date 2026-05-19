@@ -5,6 +5,7 @@ export interface RegisterData {
     Nome: string;
     CPF: string;
     DataNascimento: string;
+    Telefone: string;
     Email: string;
     Senha: string;
 }
@@ -16,9 +17,11 @@ export interface LoginData {
 }
 
 export interface AuthResponse {
+    erro: boolean;
+    message: string;
     token: string;
     usuario: {
-        id: number;
+        Id: number;
         Nome: string;
         Email: string;
     }

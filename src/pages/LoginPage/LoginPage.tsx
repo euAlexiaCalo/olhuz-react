@@ -36,17 +36,18 @@ function LoginPage() {
 
       // Salva os dados no estado global (Contexto) e localStorage
       login(response.token, {
-        id: String(response.usuario.id), // Se o seu contexto esperar string, converta. Se esperar number, tire o String()
+        id: String(response.usuario.Id), // Se o seu contexto esperar string, converta. Se esperar number, tire o String()
         name: response.usuario.Nome,
         email: response.usuario.Email
       });
 
       // Redireciona para o painel principal protegido
-      navigate('/dashboard');
+      navigate('/minha-conta');
     } catch (err) {
       const error = err as AxiosError<{ message: string }>;
 
       const apiErrorMessage = error.response?.data?.message;
+      console.error("Erro completo:", err);
       setError(apiErrorMessage || 'Erro ao acessar a conta. Verifique seu e-mail e senha.');
     } finally {
       setLoading(false);

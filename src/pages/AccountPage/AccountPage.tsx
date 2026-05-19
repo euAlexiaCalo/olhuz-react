@@ -1,19 +1,17 @@
 import { useAuth } from "../../hooks/useAuth";
-import { useState } from "react";
+import { useState } from 'react';
+
 import Navbar from "../../components/Navbar/Navbar";
 import Button from "../../components/Button/Button";
 import ButtonPill from "../../components/ButtonPill/ButtonPill";
 import Input from "../../components/Input/Input";
 import { Toggle } from "../../components/Toggle/Toggle";
 // Ícones
-import { MdOutlineSettingsVoice } from "react-icons/md";
+import { MdOutlineSettingsVoice, MdOutlineSensors, MdOutlinePalette } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa6";
 import { LuShield, LuSun, LuMoon } from "react-icons/lu";
-import { IoVolumeHighOutline } from "react-icons/io5";
-import { MdOutlineSensors } from "react-icons/md";
-import { MdOutlinePalette } from "react-icons/md";
+import { IoVolumeHighOutline, IoPlayCircleOutline } from "react-icons/io5";
 import { BsKey } from "react-icons/bs";
-import { IoPlayCircleOutline } from "react-icons/io5";
 import { RiAlertLine } from "react-icons/ri";
 import "./AccountPage.css";
 
@@ -45,7 +43,7 @@ function AccountPage() {
             <main className="account-container">
                 <nav className="account-nav">
                     <div>
-                        <h2>Olá, João</h2>
+                        <h2>Olá, Usuário</h2>
                         <ul className="account-nav-list">
                             <li>
                                 <MdOutlineSettingsVoice />
@@ -174,14 +172,13 @@ function AccountPage() {
                                 <Input
                                     type="text"
                                     label="Nome Completo"
-                                    placeholder="dados do banco"
                                     id="name"
                                 />
                                 <Input
                                     type="date"
                                     label="Data de Nascimento"
-                                    placeholder="dados do banco"
                                     id="birthdate"
+
                                 />
                                 <Button
                                     text="Salvar Dados"
@@ -194,13 +191,11 @@ function AccountPage() {
                                 <Input
                                     type="email"
                                     label="E-mail"
-                                    placeholder="dados do banco"
                                     id="email"
                                 />
                                 <Input
                                     type="text"
                                     label="CPF"
-                                    placeholder="dados do banco"
                                     id="cpf"
                                 />
                             </div>
@@ -228,7 +223,7 @@ function AccountPage() {
                                         type="password"
                                         label="Nova Senha"
                                         placeholder="Mínimo de 8 caracteres"
-                                        id="confirmPassword"
+                                        id="newPassword"
                                     />
                                     <Input
                                         type="password"
@@ -267,4 +262,4 @@ function AccountPage() {
     );
 }
 
-export default AccountPage
+export default AccountPage;
