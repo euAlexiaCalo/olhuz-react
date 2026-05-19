@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { authService } from '../../services/authService';
-import { useAuth } from '../../hooks/useAuth';
-import { useNavigate, Link } from 'react-router-dom';
-import { AxiosError } from 'axios';
+import React, { useState } from "react";
+import { authService } from "../../services/authService";
+import { useAuth } from "../../hooks/useAuth";
+import { useNavigate, Link } from "react-router-dom";
+import { AxiosError } from "axios";
 
 import { AiOutlineEye } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
@@ -12,9 +12,9 @@ import LogoOlhuz from "../../assets/logoOlhuz.png";
 import "./LoginPage.css";
 function LoginPage() {
   // Estados para armazenar os dados do formulário e erros
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
   // Hooks para autenticação global e navegação
@@ -24,31 +24,34 @@ function LoginPage() {
   // Função executada ao enviar o formulário
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(); // Evita que a página recarregue
-    setError('');       // Limpa erros anteriores
-    setLoading(true);   // Ativa estado de carregamento se desejar usar no botão
+    setError(""); // Limpa erros anteriores
+    setLoading(true); // Ativa estado de carregamento se desejar usar no botão
 
     try {
       // Chama o serviço passando as credenciais digitadas
       const response = await authService.login({
         Email: email,
-        Senha: password
+        Senha: password,
       });
 
       // Salva os dados no estado global (Contexto) e localStorage
       login(response.token, {
         id: String(response.usuario.Id), // Se o seu contexto esperar string, converta. Se esperar number, tire o String()
         name: response.usuario.Nome,
-        email: response.usuario.Email
+        email: response.usuario.Email,
       });
 
       // Redireciona para o painel principal protegido
-      navigate('/minha-conta');
+      navigate("/minha-conta");
     } catch (err) {
       const error = err as AxiosError<{ message: string }>;
 
       const apiErrorMessage = error.response?.data?.message;
       console.error("Erro completo:", err);
-      setError(apiErrorMessage || 'Erro ao acessar a conta. Verifique seu e-mail e senha.');
+      setError(
+        apiErrorMessage ||
+          "Erro ao acessar a conta. Verifique seu e-mail e senha.",
+      );
     } finally {
       setLoading(false);
     }
@@ -62,7 +65,18 @@ function LoginPage() {
       <div className="container">
         <form onSubmit={handleSubmit} className="login-form">
           <h1>Acesse sua conta Olhuz</h1>
-          {error && <div className="error-message-box" style={{ color: 'red', marginBottom: '15px', textAlign: 'center' }}>{error}</div>}
+          {error && (
+            <div
+              className="error-message-box"
+              style={{
+                color: "red",
+                marginBottom: "15px",
+                textAlign: "center",
+              }}
+            >
+              {error}
+            </div>
+          )}
           <div>
             <LabelInput
               label="Email"
@@ -70,7 +84,9 @@ function LoginPage() {
               placeholder="Digite seu email"
               id="email"
               value={email}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setEmail(e.target.value)
+              }
               required
             />
           </div>
@@ -81,12 +97,14 @@ function LoginPage() {
               placeholder="Digite sua senha"
               id="password"
               value={password}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setPassword(e.target.value)
+              }
               required
             >
               <AiOutlineEye className="icon-eye" />
             </LabelInput>
-            <a href="/forgot-password">Esqueceu sua senha?</a>
+            <Link to="/forgot-password">Esqueceu sua senha?</Link>
           </div>
           <div className="login-container-buttons">
             <Button
@@ -103,7 +121,7 @@ function LoginPage() {
             <Button
               text="Entrar com Google"
               type="button"
-              onClick={() => { }}
+              onClick={() => {}}
               color="#000000"
               bgColor="#ffffff"
               borderColor="#EBEBEB"

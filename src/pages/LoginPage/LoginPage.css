@@ -48,10 +48,10 @@
     gap: 8px;
 }
 
-.login-form a {
-    color: #1a3672;
+.login-form >div:nth-child(3) > a {
+    font-size: 16px;
     font-weight: 400;
-    font-size: 14px;
+    color: #1a3672;
 }
 
 #email {
@@ -88,8 +88,17 @@
     white-space: nowrap;
 }
 
-.login-form>div:last-child  Link {
-    font-size: 1.1rem;
+.login-form > div:last-child > p, .login-form > div:last-child > a {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.login-form > div:last-child > p {
+    color: #4e4e4e;
+}
+
+.login-form > div:last-child > a {
+    color: #1a3672;
 }
 
 .login-container-buttons {

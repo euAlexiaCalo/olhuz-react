@@ -10,12 +10,12 @@ function Navbar() {
           <Link to="/"><img src={LogoOlhuz} alt="Logo Olhuz" /></Link>
           <div>
             <Link to="/" className="navbar-logo-title">Olhuz</Link>
-            <span className="navbar-subtitle">A tecnologia que ilumina o invisível</span>
+            <Link to="/" className="navbar-subtitle">A tecnologia que ilumina o invisível</Link>
           </div>
         </div>
         <ul className="navbar-links">
           <li>
-            <Link to="/">Início</Link>
+            <Link to="/" className="nav-item">Início</Link>
           </li>
           <li>
             <Link to="/funcionalidades">Funcionalidades</Link>

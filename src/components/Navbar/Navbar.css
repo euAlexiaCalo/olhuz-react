@@ -60,10 +60,19 @@
     gap: 60px;
 }
 
+.navbar-links li {
+    padding: 8px 16px;
+}
+
 .navbar-links a {
     font-size: 1.1rem;
     font-weight: 500;
+    color: #303030;
     cursor: pointer;
+}
+
+.navbar-links a:hover {
+    color: #002b5b;
 }
 
 .navbar-login {
